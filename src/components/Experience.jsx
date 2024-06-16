@@ -18,6 +18,7 @@ const Experience = () => {
                     initial={{opacity: 0, x: -100}}
                     transition={{duration: 1}}
                     className='w-full lg:w-1/4'>
+                        
                         <p className='mb-2 text-lg text-neutral-400'>{experience.year}</p>
                     </motion.div>
                     <motion.div 
@@ -34,13 +35,14 @@ const Experience = () => {
                         <p className='mb-4 text-neutral-400'>{experience.description}</p>
                         <div className='flex flex-wrap justify-center items-center space y-8'>
                             {experience.technologies.map((tech, index) => (
-                                <span key={index} className='mr-1 rounded bg-neutral-900 px-2 py-1 text-sm sm:text-base md:text-lg font-bold text-purple-800'>{tech}</span>
+                                <span key={index} className='mr-1 text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'>{tech}</span>
                             ))}
                         </div>
                     </motion.div>
                 </div>
             ))}
         </div>
+        
     </div>
   )
 }
